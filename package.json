@@ -1,0 +1,22 @@
+{
+  "name": "cap",
+  "version": "1.0.0",
+  "description": "cap app testing ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asyncDeveloper-fiori/CAP_test.git"
+  },
+  "author": "satyam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asyncDeveloper-fiori/CAP_test/issues"
+  },
+  "homepage": "https://github.com/asyncDeveloper-fiori/CAP_test#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

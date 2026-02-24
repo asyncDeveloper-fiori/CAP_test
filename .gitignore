@@ -1,0 +1,60 @@
+# =========================
+# Node Dependencies
+# =========================
+node_modules/
+package-lock.json # (Optional: Ignore if you are using yarn, or keep if you want reproducible npm installs)
+
+# =========================
+# Build Outputs & Artifacts
+# =========================
+dist/
+build/
+webapp-dist/
+*.zip
+
+# =========================
+# UI5 Tooling
+# =========================
+.ui5/
+ui5-local.yaml # Often used for local testing configurations
+
+# =========================
+# Logs and Databases
+# =========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+default-env.json # Often used in SAP BTP local development
+
+# =========================
+# Editor / IDE Specific
+# =========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# =========================
+# OS Generated Files
+# =========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
