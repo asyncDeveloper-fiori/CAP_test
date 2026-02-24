@@ -46,3 +46,12 @@ app.get("/", (req, res) => {
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
+
+
+// using url parameters
+app.get("/vendors/:id",(req,res)=>{
+    const vendorId = req.params.id;
+    const isVendorPresent = this.vendors.data.suppliers.find(vendor => vendor.id === vendorId);
+    const userText = isVendorPresent ? `Vendor with ID ${vendorId} is present` : `Vendor with ID ${vendorId} is not present`;
+    res.send(userText);
+})
