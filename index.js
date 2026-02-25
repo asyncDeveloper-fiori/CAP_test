@@ -2,6 +2,9 @@
 const express = require("express");
 const app = express();
 
+// middleware to parse JSON
+app.use(express.json());
+
 // sample data
 this.vendors = {
   status: "success",
@@ -41,6 +44,12 @@ this.vendors = {
 app.get("/", (req, res) => {
   res.json(this.vendors);
 });
+
+// create route for index.html
+app.get("/home",(req,res)=>{
+  console.log(__dirname);
+  res.sendFile(__dirname + "/webapp/index.html");
+})
 
 // Start the server
 app.listen(3000, () => {
