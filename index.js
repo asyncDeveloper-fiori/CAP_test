@@ -51,12 +51,6 @@ app.get("/home",(req,res)=>{
   res.sendFile(__dirname + "/webapp/index.html");
 })
 
-// Start the server
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
-});
-
-
 // using url parameters
 app.get("/vendors/:id",(req,res)=>{
     const vendorId = req.params.id;
@@ -64,3 +58,15 @@ app.get("/vendors/:id",(req,res)=>{
     const userText = isVendorPresent ? `Vendor with ID ${vendorId} is present` : `Vendor with ID ${vendorId} is not present`;
     res.send(userText);
 })
+
+// any other url not found error
+app.use((req,res,next)=>{
+  res.status(404).send("Page not found");
+})
+
+// Start the server
+app.listen(3000, () => {
+  console.log("Server is running on port 3000");
+});
+
+
